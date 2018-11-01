@@ -25,6 +25,8 @@ import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import Font from '@ckeditor/ckeditor5-font/src/font';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -48,7 +50,10 @@ ClassicEditor.builtinPlugins = [
 	MediaEmbed,
 	Paragraph,
 	Table,
-	TableToolbar
+	TableToolbar,
+
+        Alignment,
+        Font
 ];
 
 // Editor configuration.
@@ -57,8 +62,11 @@ ClassicEditor.defaultConfig = {
 		items: [
 			'heading',
 			'|',
+                        'fontSize',
+                        '|',
 			'bold',
 			'italic',
+                        'alignment',
 			'link',
 			'bulletedList',
 			'numberedList',
